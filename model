@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import init
 import warnings
 from CA import CoordAtt
-from models.odconv import ODConv2d
+from models.od import ODConv2d
 
 
 
