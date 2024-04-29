@@ -184,21 +184,4 @@ class OD_CA_ResNet(nn.Module):
         return x
 
 
-def od_ca_ResidualNet( depth, num_classes, att_type):
 
-    assert depth in [18, 34, 50, 101], 'network depth should be 18, 34, 50 or 101'
-
-    if depth == 18:
-        model = OD_CA_ResNet(Bottleneck, [2, 2, 2, 2], num_classes, att_type)
-        # model = OD_CA_ResNet(Bottleneck, [6, 8, 36, 6], num_classes, att_type)
-
-    elif depth == 34:
-        model = OD_CA_ResNet(Bottleneck, [3, 4, 6, 3], num_classes, att_type)
-
-    elif depth == 50:
-        model = OD_CA_ResNet(Bottleneck, [3, 4, 6, 3], num_classes, att_type)
-
-    elif depth == 101:
-        model = OD_CA_ResNet(Bottleneck, [3, 4, 23, 3], num_classes, att_type)
-
-    return model
